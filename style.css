@@ -1,0 +1,23 @@
+body {
+    background-color: #171718;
+    color: #fff;
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: row;
+
+    min-height: 100vh;
+}
+
+
+aside {
+    width: 40%;
+
+    background: 
+    linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), 
+    url('/images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg');
+}
+
+section {
+    width: 60%;
+}
