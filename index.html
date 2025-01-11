@@ -10,8 +10,10 @@
 <body>
     
     <aside>
-        <h2>FORM</h2>
-        <span>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/red-and-blue-wallpaper-6lQDFGOB1iw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></span>
+        <h2>/FORM.</h2>
+        <span>
+            Photo by <a href="https://unsplash.com/@fujiphilm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fujiphilm</a> on <a href="https://unsplash.com/photos/a-painting-of-a-man-holding-a-baby-eNCgAozCuKo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </span>
     </aside>
     <section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -22,26 +24,40 @@
         <form action="#" method="post">
             <fieldset>
                 <fieldset>
-                    <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" id="first-name" required>
-                    <label for="last-name">Last Name</label>
-                    <input type="text" name="last-name" id="last-name" required>
+                    <div class="input">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" required>
+                    </div>
+                    <div class="input">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" required>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                    <label for="phone-num">Phone Number</label>
-                    <input type="tel" name="phone-num" id="phone-num" required>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input">
+                        <label for="phone-num">Phone Number</label>
+                        <input type="tel" name="phone-num" id="phone-num" required>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <label for="pass">Password</label>
-                    <input type="password" name="password" id="pass required">
-                    <label for="confirm-pass"></label>
-                    <input type="password" name="confirmed-password" id="confirm-pass" required>
+                    <div class="input">
+                        <label for="pass">Password</label>
+                        <input type="password" name="password" id="pass" required>
+                    </div>
+                    <div class="input">
+                        <label for="confirm-pass">Confirm Password</label>
+                        <input type="password" name="confirmed-password" id="confirm-pass" required>
+                    </div>
                 </fieldset>
             </fieldset>
             <button type="submit">Create Account</button>
         </form>
     </section>
+
+<script src="script.js" defer></script>
 </body>
 </html>

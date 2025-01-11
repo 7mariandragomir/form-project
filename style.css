@@ -1,23 +1,162 @@
+@font-face {
+    font-family: jersey;
+    src: url('/resources/Jersey15-Regular.ttf');
+    font-display: swap;
+}
+
+:root {
+    --bg1: #111214;
+    --bg2: #1E2221;
+    --white: #fff;
+    --accent: #2a7086;
+    --accent2: #09505c;
+    --error: #ee5a2d;
+}
+
+::selection {
+    background-color: var(--accent);
+}
+
 body {
-    background-color: #171718;
-    color: #fff;
+    background: linear-gradient(130deg, var(--bg1), var(--bg2));
+    color: var(--white);
     font-family: sans-serif;
 
     display: flex;
-    flex-direction: row;
 
     min-height: 100vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+
+        min-height: 40vh;
+    }
+
+
+}
+
+@media screen and (max-width: 525px) {
+    fieldset > fieldset {
+        flex-direction: column;
+    }
 }
 
 
 aside {
-    width: 40%;
+    padding: 24px;
+    min-width: 40%;
 
     background: 
-    linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), 
-    url('/images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg');
+    linear-gradient(0deg, rgba(2, 3, 20, 0), rgba(1, 7, 12, 0.7)), 
+    url('/resources/fujiphilm-eNCgAozCuKo-unsplash.jpg');
+    /* background-image: url('/resources/fujiphilm-eNCgAozCuKo-unsplash.jpg'); */
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    & h2 {
+        align-self: flex-start;
+        font-family: 'jersey';
+        font-size: 5rem;
+    }
+
+    & span {
+        align-self: center;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    & a {
+        color: inherit;
+    }
 }
 
 section {
-    width: 60%;
+    min-width: 60%;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+fieldset {
+    border: none;
+    padding-left: 0;
+}
+
+section > p {
+    font-size: 1.5rem;
+    padding-bottom: 56px;
+}
+
+fieldset > fieldset {
+    display: flex;
+    gap: 16px;
+    width: min(100%, 750px);
+    justify-content: space-between;
+
+
+    & > * {
+        width: 50%;
+    }
+
+    & .input {
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        max-width: 300px;
+    }
+
+    & input {
+        width: inherit;
+        border: none;
+        border-radius: .5rem;
+        border-top-left-radius: 0;
+
+        height: 30px;
+    }
+    
+}
+
+.input label {
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 1rem;
+
+    &:has(+input:focus) {
+        font-weight: bold;
+    }
+    &:has(+input:user-invalid) {
+        color: var(--error);
+    }
+    &:has(+input:required):after {
+        content: '*';
+    }
+}
+
+button {
+    width: min(250px, 100%);
+    height: 50px;
+
+    background-color: var(--accent);
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    font-weight: bold;
+    
+    &:hover {
+        transition: .5s;
+        background-color: var(--accent2);
+        cursor: pointer;
+    }
 }
