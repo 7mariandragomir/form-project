@@ -1,6 +1,6 @@
 @font-face {
     font-family: jersey;
-    src: url('/resources/Jersey15-Regular.ttf');
+    src: url('./resources/Jersey15-Regular.ttf');
     font-display: swap;
 }
 
@@ -54,7 +54,7 @@ aside {
 
     background: 
     linear-gradient(0deg, rgba(2, 3, 20, 0), rgba(1, 7, 12, 0.7)), 
-    url('/resources/fujiphilm-eNCgAozCuKo-unsplash.jpg');
+    url('./resources/fujiphilm-eNCgAozCuKo-unsplash.jpg');
     /* background-image: url('/resources/fujiphilm-eNCgAozCuKo-unsplash.jpg'); */
     background-position: 50% 20%;
     background-repeat: no-repeat;
