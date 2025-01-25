@@ -1,5 +1,6 @@
 const passInput = document.getElementById('pass');
 const passCheckInput = document.getElementById('confirm-pass');
+const submitBtn = document.getElementById('submit-btn');
 
 let passwordValue, passwordCheckValue;
 
@@ -12,9 +13,10 @@ passCheckInput.addEventListener('input', e => {
     
     if(!(passwordCheckValue === passwordValue) && !(passwordCheckValue === '')) {
         passCheckInput.classList.add('invalid');
-        console.log(`${passwordValue} and ${passwordCheckValue}`)
+        submitBtn.disabled = true;
     } else {
         passCheckInput.classList.remove('invalid');
+        submitBtn.disabled = false;
     }
 })
 

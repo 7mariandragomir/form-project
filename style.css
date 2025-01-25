@@ -153,6 +153,10 @@ button {
     border-radius: .5rem;
     color: var(--white);
     font-weight: bold;
+
+    &:disabled {
+        background-color: var(--accent2);
+    }
     
     &:hover {
         transition: .5s;
