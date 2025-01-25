@@ -10,7 +10,7 @@
     --white: #fff;
     --accent: #2a7086;
     --accent2: #09505c;
-    --error: #ee5a2d;
+    --error: #c27159;
 }
 
 ::selection {
@@ -159,4 +159,8 @@ button {
         background-color: var(--accent2);
         cursor: pointer;
     }
+}
+
+.invalid {
+    background-color: var(--error);
 }
